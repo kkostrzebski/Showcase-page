@@ -1,3 +1,7 @@
+import kot1 from '../../assets/images/Offer/kot1.jpg'
+import kot2 from '../../assets/images/Offer/kot2.jpg'
+import kot3 from '../../assets/images/Offer/kot3.jpg'
+import kot4 from '../../assets/images/Offer/kot4.jpg'
 const Offer = () => {
 	return (
 		<>
@@ -6,19 +10,19 @@ const Offer = () => {
 				<div className='tiles wrapper'>
 					<div className='tile'>
 						<p className='tile-title'>Web design</p>
-						<img src='./3570c04f-9bcf-40da-835b-86fe763d47a8(1).jpg' alt='Zdjęcie 1' />
+						<img src={kot1} alt='Zdjęcie 1' />
 					</div>
 					<div className='tile'>
 						<p className='tile-title'>Strony i aplikacje internetowe</p>
-						<img src='./43a2f558-bf8c-473e-9c30-24a2bda18ef6.jpg' alt='Zdjęcie 2' />
+						<img src={kot2} alt='Zdjęcie 2' />
 					</div>
 					<div className='tile'>
 						<p className='tile-title'>RWD</p>
-						<img src='./4f1416f2-d769-4b7d-bff0-9048d76e7940.jpg' alt='Zdjęcie 3' />
+						<img src={kot3} alt='Zdjęcie 3' />
 					</div>
 					<div className='tile'>
 						<p className='tile-title' />
-						<img src='./b822ec66-1258-4c30-8fa0-2b1a31c9f2b3.jpg' alt='Zdjęcie 4' />
+						<img src={kot4} alt='Zdjęcie 4' />
 					</div>
 				</div>
 			</section>

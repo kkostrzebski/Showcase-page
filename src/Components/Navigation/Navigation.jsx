@@ -49,15 +49,8 @@ const Navigation = () => {
 			})
 		}
 
-		// const handleCurrentYear = () => {
-		//   const year = new Date().getFullYear();
-		//   footerYear.innerText = year;
-		// };
-		// handleCurrentYear();
+		navBtn.addEventListener('click', handleNav)
 
-		navBtn.addEventListener('click', handleNav);
-
-		// W przypadku zdarzenia, które wywołuje nasz efekt, warto usunąć nasłuchiwacze
 		return () => {
 			logo.removeEventListener('click', scrollToTop)
 			navBtn.removeEventListener('click', handleNav)
@@ -87,11 +80,11 @@ const Navigation = () => {
 					<a href='#skills' className='nav-item'>
 						Skills
 					</a>
-					<a href='#about' className='nav-item'>
-						About
-					</a>
 					<a href='#projects' className='nav-item'>
 						Projects
+					</a>
+					<a href='#career' className='nav-item'>
+						Career
 					</a>
 					<a href='#contact' className='nav-item'>
 						Contact

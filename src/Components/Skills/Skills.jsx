@@ -31,10 +31,6 @@ const Skills = () => {
 			<h3 className='skill-heading'>Hard</h3>
 			<div className='hard-skills'>
 				<div className='skill-tile'>
-					<i className='fab fa-js' />
-					<span>JavaScript</span>
-				</div>
-				<div className='skill-tile'>
 					<i className='fab fa-html5' />
 					<span>HTML5</span>
 				</div>
@@ -43,12 +39,28 @@ const Skills = () => {
 					<span>CSS3</span>
 				</div>
 				<div className='skill-tile'>
-					<i className='fab fa-react' />
-					<span>React</span>
+					<i className='fa-brands fa-sass' />
+					<span>Sass</span>
+				</div>
+				<div className='skill-tile'>
+					<i className='fab fa-js' />
+					<span>JavaScript</span>
 				</div>
 				<div className='skill-tile'>
 					<iconify-icon icon='simple-icons:typescript' />
 					<span>TypeScript</span>
+				</div>
+				<div className='skill-tile'>
+					<i className='fa-brands fa-git-alt' />
+					<span>Git</span>
+				</div>
+				<div className='skill-tile'>
+					<i className='fab fa-react' />
+					<span>React</span>
+				</div>
+				<div className='skill-tile'>
+                <i className="fa-brands fa-angular" />
+					<span>Angular</span>
 				</div>
 				<div className='skill-tile'>
 					<i className='fa-brands fa-npm' />
@@ -59,8 +71,8 @@ const Skills = () => {
 					<span>Bootstrap</span>
 				</div>
 				<div className='skill-tile'>
-					<i className='fa-brands fa-sass' />
-					<span>Sass</span>
+					<iconify-icon icon='file-icons:vite'></iconify-icon>
+					<span>Vite</span>
 				</div>
 			</div>
 		</section>

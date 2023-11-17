@@ -1,6 +1,14 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const ProjectsCard = ({ title, description, framework, styling }) => {
+	const navigate = useNavigate()
+
+	const handleChooseClick = () => {
+		console.log('Button clicked!')
+		navigate('/game')
+	}
 	return (
 		<div className='projects-card' onClick={() => void 0}>
 			<div className='projects-card-img projects-card-img--first'>
@@ -18,9 +26,12 @@ const ProjectsCard = ({ title, description, framework, styling }) => {
 					<p>Framework: {framework}</p>
 					<p>Styling: {styling}</p>
 				</div>
-					<button className='projects-card-info-btn btn-special-animation' data-project={title}>
+
+				<Link to='/home'>
+					<button className='projects-card-info-btn btn-special-animation' onClick={handleChooseClick}>
 						Choose
 					</button>
+				</Link>
 			</div>
 		</div>
 	)
@@ -44,13 +55,15 @@ const Projects = () => {
 		},
 		{
 			title: 'Search engine for dog breeds',
-			description: 'This web page uses a dog breed API to dynamically showcase information and images of different dog breeds. Users can explore and learn about each breed, providing an interactive and visually engaging experience tailored for dog enthusiasts and potential pet owners.',
+			description:
+				'This web page uses a dog breed API to dynamically showcase information and images of different dog breeds. Users can explore and learn about each breed, providing an interactive and visually engaging experience tailored for dog enthusiasts and potential pet owners.',
 			framework: 'REACT',
 			styling: 'CSS',
 		},
 		{
 			title: 'Web site',
-			description: 'This HTML document represents a travel website named "Tropical Majadise" showcasing tropical destinations. The site features a responsive design, attractive visuals, and sections highlighting exotic islands, vacation offers, customer reviews, and a contact form, providing a comprehensive user experience for exploring and planning tropical getaways.',
+			description:
+				'This HTML document represents a travel website named "Tropical Majadise" showcasing tropical destinations. The site features a responsive design, attractive visuals, and sections highlighting exotic islands, vacation offers, customer reviews, and a contact form, providing a comprehensive user experience for exploring and planning tropical getaways.',
 			framework: '-',
 			styling: 'Sass',
 		},

@@ -1,7 +1,7 @@
-import kot1 from '../../assets/images/Offer/kot1.jpg'
-import kot2 from '../../assets/images/Offer/kot2.jpg'
-import kot3 from '../../assets/images/Offer/kot3.jpg'
-import kot4 from '../../assets/images/Offer/kot4.jpg'
+import Design from '../../assets/images/Offer/Design.jpg'
+import RWDs from '../../assets/images/Offer/RWD.jpg'
+import SEOs from '../../assets/images/Offer/SEO.jpg'
+import Web from '../../assets/images/Offer/Web.jpg'
 const Offer = () => {
 	return (
 		<>
@@ -10,19 +10,19 @@ const Offer = () => {
 				<div className='tiles wrapper'>
 					<div className='tile'>
 						<p className='tile-title'>Web design</p>
-						<img src={kot1} alt='Zdjęcie 1' />
+						<img src={Design} alt='Zdjęcie 1' />
 					</div>
 					<div className='tile'>
-						<p className='tile-title'>Strony i aplikacje internetowe</p>
-						<img src={kot2} alt='Zdjęcie 2' />
+						<p className='tile-title'>Web sites and web applications</p>
+						<img src={Web} alt='Zdjęcie 2' />
 					</div>
 					<div className='tile'>
 						<p className='tile-title'>RWD</p>
-						<img src={kot3} alt='Zdjęcie 3' />
+						<img src={RWDs} alt='Zdjęcie 3' />
 					</div>
 					<div className='tile'>
-						<p className='tile-title' />
-						<img src={kot4} alt='Zdjęcie 4' />
+						<p className='tile-title'>SEO</p>
+						<img src={SEOs} alt='Zdjęcie 4' />
 					</div>
 				</div>
 			</section>

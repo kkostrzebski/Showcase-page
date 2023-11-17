@@ -477,6 +477,7 @@ body {
 }
 .projects-card-info {
 	position: absolute;
+	padding: 1.5em;
 	top: 0;
 	bottom: 0;
 	left: 0;

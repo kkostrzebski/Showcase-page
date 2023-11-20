@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-
-const ProjectsCard = ({ title, description, framework, styling }) => {
+import '../App.css'
+const ProjectsCard = ({ title, description, framework, styling, page }) => {
 	const navigate = useNavigate()
 
 	const handleChooseClick = () => {
-		console.log('Button clicked!')
-		navigate('/game')
+		navigate(`/${page}`)
 	}
 	return (
 		<div className='projects-card' onClick={() => void 0}>
@@ -27,9 +26,9 @@ const ProjectsCard = ({ title, description, framework, styling }) => {
 					<p>Styling: {styling}</p>
 				</div>
 
-				<Link to='/home'>
+				<Link to={`/${page}`}>
 					<button className='projects-card-info-btn btn-special-animation' onClick={handleChooseClick}>
-						Choose
+					Go to the project
 					</button>
 				</Link>
 			</div>
@@ -42,6 +41,7 @@ ProjectsCard.propTypes = {
 	description: PropTypes.string.isRequired,
 	framework: PropTypes.string.isRequired,
 	styling: PropTypes.string.isRequired,
+	page: PropTypes.string.isRequired,
 }
 
 const Projects = () => {
@@ -52,6 +52,7 @@ const Projects = () => {
 				'In the Actor Matcher project, users can randomly select an actor and must then find and match a movie in which the selected actor played a role. The goal is to test your knowledge of various actors and their filmography.',
 			framework: 'React',
 			styling: 'CSS',
+			page: 'home',
 		},
 		{
 			title: 'Search engine for dog breeds',
@@ -59,13 +60,7 @@ const Projects = () => {
 				'This web page uses a dog breed API to dynamically showcase information and images of different dog breeds. Users can explore and learn about each breed, providing an interactive and visually engaging experience tailored for dog enthusiasts and potential pet owners.',
 			framework: 'REACT',
 			styling: 'CSS',
-		},
-		{
-			title: 'Web site',
-			description:
-				'This HTML document represents a travel website named "Tropical Majadise" showcasing tropical destinations. The site features a responsive design, attractive visuals, and sections highlighting exotic islands, vacation offers, customer reviews, and a contact form, providing a comprehensive user experience for exploring and planning tropical getaways.',
-			framework: '-',
-			styling: 'Sass',
+			page: 'list',
 		},
 	]
 
@@ -81,6 +76,7 @@ const Projects = () => {
 							description={project.description}
 							framework={project.framework}
 							styling={project.styling}
+							page={project.page}
 						/>
 					))}
 				</div>

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-
+import '../App.css'
 const Navigation = () => {
 	const navRef = useRef(null)
 	const navBtnRef = useRef(null)
@@ -65,7 +65,7 @@ const Navigation = () => {
 	return (
 		<>
 			<div className='logo' ref={logoRef}>
-				Twoje.<span>Logo</span>
+				<i className='fa-solid fa-arrow-up'></i>
 			</div>
 			<button className='burger-btn' ref={navBtnRef}>
 				<div className='burger-box'>
@@ -91,19 +91,6 @@ const Navigation = () => {
 					</a>
 				</div>
 			</nav>
-			<div className='social'>
-				<div className='social-icons'>
-					<a href='https://github.com/kkostrzebski' target='_blank' rel='noreferrer'>
-						<i className='fab fa-github' />
-					</a>
-					<a href='https://www.linkedin.com/in/konrad-kostrzębski-067346278/' target='_blank' rel='noreferrer'>
-						<i className='fab fa-linkedin' />
-					</a>
-					<a href='link-do-Facebooka'>
-						<i className='fab fa-facebook' />
-					</a>
-				</div>
-			</div>
 		</>
 	)
 }

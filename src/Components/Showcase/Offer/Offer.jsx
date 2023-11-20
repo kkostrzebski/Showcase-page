@@ -1,7 +1,8 @@
-import Design from '../../assets/images/Offer/Design.jpg'
-import RWDs from '../../assets/images/Offer/RWD.jpg'
-import SEOs from '../../assets/images/Offer/SEO.jpg'
-import Web from '../../assets/images/Offer/Web.jpg'
+import Design from '../../../assets/images/Offer/Design.jpg'
+import RWDs from '../../../assets/images/Offer/RWD.jpg'
+import SEOs from '../../../assets/images/Offer/SEO.jpg'
+import Web from '../../../assets/images/Offer/Web.jpg'
+import '../App.css'
 const Offer = () => {
 	return (
 		<>

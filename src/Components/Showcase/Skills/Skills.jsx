@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import '../App.css'
 const Skills = () => {
 	return (
 		<section id='skills' className='section-padding'>
@@ -59,7 +60,7 @@ const Skills = () => {
 					<span>React</span>
 				</div>
 				<div className='skill-tile'>
-                <i className="fa-brands fa-angular" />
+					<i className='fa-brands fa-angular' />
 					<span>Angular</span>
 				</div>
 				<div className='skill-tile'>

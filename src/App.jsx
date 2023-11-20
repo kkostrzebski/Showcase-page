@@ -1,18 +1,21 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {} from 'react'
 
-import Navigation from './Components/Navigation/Navigation'
-import Header from './Components/Header/Header'
-import Offer from './Components/Offer/Offer'
-import Skills from './Components/Skills/Skills'
-import Footer from './Components/Footer/Footer'
-import Projects from './Components/Projects/Projects'
-import Career from './Components/Career/Career'
-import Contact from './Components/Contact/Contact'
+import Navigation from './Components/Showcase/Navigation/Navigation'
+import Header from './Components/Showcase/Header/Header'
+import Offer from './Components/Showcase/Offer/Offer'
+import Skills from './Components/Showcase/Skills/Skills'
+import Footer from './Components/Showcase/Footer/Footer'
+import Projects from './Components/Showcase/Projects/Projects'
+import Career from './Components/Showcase/Career/Career'
+import Contact from './Components/Showcase/Contact/Contact'
 import Home from './Components/Api-app/Home/Home'
 import ActorDetails from './Components/Api-app/ActorGame/ActorDetails'
 import StarWarsManagementTool from './Components/Api-app/StarWars/StarWarsManagementTool'
 import Navigations from './Components/Api-app/Home/Navigation'
+import BreedList from './Components/List-of -Dog/List/BreedList'
+import BreedSearch from './Components/List-of -Dog/Search/BreedSearch'
+import BreedNavigation from './Components/List-of -Dog/BreedNavigation/BreedNavigation'
 const App = () => {
 	return (
 		<Router basename='/Showcase-page'>
@@ -59,6 +62,25 @@ const App = () => {
 						</div>
 					}
 				/>
+				<Route
+					path='/list'
+					element={
+						<div>
+							<BreedNavigation />
+							<BreedList />
+						</div>
+					}
+				/>
+				<Route
+					path='/search'
+					element={
+						<div>
+							<BreedNavigation />
+							<BreedSearch />
+						</div>
+					}
+				/>
+				
 			</Routes>
 		</Router>
 	)

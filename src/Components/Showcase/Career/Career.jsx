@@ -1,3 +1,4 @@
+import '../App.css'
 const Career = () => {
     // Pobierz aktualną datę
     function getCurrentDate() {
@@ -7,7 +8,7 @@ const Career = () => {
     }
 
     return (
-        <section id='career' className='section-padding'>
+        <section id='career' className='section-padding career-section'>
             <h2 className='section-heading'>Career</h2>
             <div className='career-tiles'>
                 <div className='career-tile'>

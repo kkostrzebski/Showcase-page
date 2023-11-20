@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-
+import './App.css'
 const Navigation = () => {
 	const location = useLocation()
 	const isHomePage = location.pathname === '/'
@@ -9,7 +9,7 @@ const Navigation = () => {
 	}
 
 	return (
-		<nav>
+		<nav className='nav-container'>
 			<ul className='nav-list'>
 				<li>
 					<Link to='/' className='nav-home'>

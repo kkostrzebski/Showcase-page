@@ -225,9 +225,9 @@ const StarWarsManagementTool = () => {
 
 			<div className='info-container'>
 				<div className='person-section'>
-					<div>
+					<div className='header-section'>
 						<h2>People:</h2>
-						<select onChange={handlePersonSelect}>
+						<select className='select-label' onChange={handlePersonSelect}>
 							<option value=''>Select a person</option>
 							{people.map(person => (
 								<option key={person.url} value={person.url}>
@@ -240,7 +240,7 @@ const StarWarsManagementTool = () => {
 					<div className='checkbox-section'>{getCheckboxItems(selectedPersonInfo, handlePersonInfoChange)}</div>
 
 					{selectedPerson && (
-						<div className='selected-person'>
+						<div className='selected-section'>
 							<h2>Selected Person: {selectedPerson.name}</h2>
 							{getInfoItems(selectedPerson, selectedPersonInfo)}
 						</div>
@@ -248,7 +248,7 @@ const StarWarsManagementTool = () => {
 				</div>
 
 				<div className='starship-section'>
-					<div>
+					<div className='header-section'>
 						<h2>Starships:</h2>
 						<ul className='starships-list'>
 							{starshipNames.map(starshipName => (
@@ -262,15 +262,17 @@ const StarWarsManagementTool = () => {
 					<div className='checkbox-section'>{getCheckboxItems(selectedStarshipInfo, handleStarshipInfoChange)}</div>
 
 					{selectedStarship && (
-						<div className='selected-starship'>
-							<h2>Selected Starship: {selectedStarship.name}</h2>
+						<div className='selected-section'>
+							<h2 className='header-selected'>
+								Selected Starship: <span>{selectedStarship.name}</span>
+							</h2>
 							{getInfoItems(selectedStarship, selectedStarshipInfo)}
 						</div>
 					)}
 				</div>
 
 				<div className='vehicle-section'>
-					<div>
+					<div className='header-section'>
 						<h2>Vehicles:</h2>
 						<ul className='vehicles-list'>
 							{vehicleNames.map(vehicleName => (
@@ -284,7 +286,7 @@ const StarWarsManagementTool = () => {
 					<div className='checkbox-section'>{getCheckboxItems(selectedVehicleInfo, handleVehicleInfoChange)}</div>
 
 					{selectedVehicle && (
-						<div className='selected-vehicle'>
+						<div className='selected-section'>
 							<h2>{selectedVehicle.name}</h2>
 							{getInfoItems(selectedVehicle, selectedVehicleInfo)}
 						</div>
@@ -296,15 +298,17 @@ const StarWarsManagementTool = () => {
 						<h2>Planet:</h2>
 						{selectedPerson && selectedPlanet ? (
 							<div>
-								<h3>{selectedPlanet.name}</h3>
-								<ul className='planet-info-list'>{getCheckboxItems(planetInfo, handlePlanetInfoChange)}</ul>
+								<h3 className='planet-list'>{selectedPlanet.name}</h3>
+								<ul className='checkbox-section planet-info-list'>
+									{getCheckboxItems(planetInfo, handlePlanetInfoChange)}
+								</ul>
 							</div>
 						) : (
 							<p>No planet information available for the selected person.</p>
 						)}
 					</div>
 					{selectedPerson && selectedPlanet && (
-						<div className='selected-planet'>
+						<div className='selected-section'>
 							<h2>Informacje o planecie: {selectedPlanet.name}</h2>
 							{getInfoItems(selectedPlanet, planetInfo)}
 						</div>

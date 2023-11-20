@@ -11,7 +11,7 @@ const ActorDetails = () => {
 	const [wrongAnswers, setWrongAnswers] = useState(0)
 
 	useEffect(() => {
-		console.log('ActorDetails component mounted!');
+		console.log('ActorDetails component mounted!')
 		fetchRandomActorAndMovies()
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
@@ -31,6 +31,7 @@ const ActorDetails = () => {
 			const actorsResponse = await axios.get(
 				`https://api.themoviedb.org/3/person/popular?api_key=${apiKey}&language=en-US`
 			)
+			console.log(actorsResponse)
 			const actors = actorsResponse.data.results
 			const randomActor = actors[Math.floor(Math.random() * actors.length)]
 			setActor(randomActor)
@@ -97,7 +98,7 @@ const ActorDetails = () => {
 								alt={movie.title}
 								className='movie-image'
 							/>
-							<h4 className='movie-title'>{movie.title}</h4>
+							<h4 className='movie-title'>{movie.title || movie.original_name}</h4>
 						</div>
 					))}
 				</div>

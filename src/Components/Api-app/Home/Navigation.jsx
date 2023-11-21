@@ -10,12 +10,11 @@ const Navigation = () => {
 
 	return (
 		<nav className='nav-container'>
+			<Link to='//' className='home-icon-app'>
+				<div>HOME</div>
+			</Link>
 			<ul className='nav-list'>
-				<li>
-					<Link to='/' className='nav-home'>
-						<div className='nav-icon'>🏠</div>
-					</Link>
-				</li>
+				<li></li>
 				<li>
 					<Link to='/game'>One actor, three movies</Link>
 				</li>

@@ -1,3 +1,6 @@
+html {
+	background-color: #fff;
+}
 .breed-container {
 	background-color: #fff;
 	height: 100vh;
@@ -14,7 +17,22 @@
 	text-align: center;
 	width: 100vw;
 }
-
+.home-icon {
+	position: relative;
+	display: flex;
+	position: fixed;
+	justify-content: start;
+	align-items: center;
+	text-decoration: none;
+	color: #fff;
+	z-index: 9999;
+	padding-top: 10px;
+	padding-left: 10px;
+	font-size: 5rem;
+}
+.home-icon:hover {
+	color: goldenrod;
+}
 .nav-links-breed {
 	display: flex;
 	justify-content: center;
@@ -183,7 +201,9 @@
 	.content-breed {
 		margin-top: 100px;
 	}
-
+	.home-icon {
+		font-size: 2rem;
+	}
 	.nav-container-breed {
 		height: 70px;
 	}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate, Link} from 'react-router-dom'
 import '../Breed.css'
 import { FaDog, FaSearch } from 'react-icons/fa'
 
@@ -17,7 +17,6 @@ const BreedNavigation = () => {
 			}
 		}
 
-	
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth)
 		}
@@ -33,16 +32,15 @@ const BreedNavigation = () => {
 
 	const shouldDisplayIcons = windowWidth < 568
 
-
 	return (
 		<div className='content'>
+			<Link className='home-icon' to='//'>
+				<div>HOME</div>
+			</Link>
 			<nav className={`nav-container-breed ${isScrolled ? 'scrolled' : ''}`}>
 				<ul className='nav-links-breed '>
-					<NavLink to='/' activeClassName='active'>
-						<div className='nav-icon'>🏠</div>
-					</NavLink>
 					<li>
-						<NavLink  to='/list' activeClassName='active'>
+						<NavLink to='/list' activeClassName='active'>
 							{shouldDisplayIcons ? <FaDog /> : 'Lista ras'}
 						</NavLink>
 					</li>

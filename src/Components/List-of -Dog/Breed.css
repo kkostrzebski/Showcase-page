@@ -228,6 +228,7 @@ html {
 	}
 
 	.breed-list {
+		padding-left: 15px;
 		font-size: 12px;
 		grid-template-columns: repeat(1, 1fr);
 	}

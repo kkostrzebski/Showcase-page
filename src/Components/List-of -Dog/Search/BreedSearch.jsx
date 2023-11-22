@@ -76,7 +76,6 @@ const BreedSearch = () => {
 		}
 	}
 
-	
 	return (
 		<div className='breed-container'>
 			<h1 className='breed-search-title'>Wyszukiwanie rasy psa</h1>
@@ -89,7 +88,7 @@ const BreedSearch = () => {
 								name='breed'
 								value={inputBreed}
 								onChange={event => setInputBreed(event.target.value)}
-								placeholder='Wprowadź rase psa:'
+								placeholder='Wprowadź rase:'
 							/>
 							<button type='submit' className='search-button-breed '>
 								<i className='fas fa-search'></i>
